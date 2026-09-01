@@ -19,21 +19,24 @@
         }
 
          body {
-            min-height: 100vh;
-            background: linear-gradient(135deg, #121236, #1b1654, #541675, #a31a7c);
-            background-size: 200% 200%;
-            animation: gravitySpace 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
-            color: #e0d7ff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 60px 20px;
-        }
-	@keyframes gravitySpace {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0% 0%; }
-        }
+		    min-height: 100vh;
+		    /* Updated first two colors to purplish-blue (#1d1242) and deep dark purplish-blue (#2d114c) */
+		    background: linear-gradient(135deg, #1d1242, #2d114c, #541675, #a31a7c);
+		    background-size: 200% 200%;
+		    /* Changed to linear for completely uniform color distribution and time */
+		    animation: gravitySpace 12s linear infinite;
+		    color: #e0d7ff;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    padding: 60px 20px;
+		}
+		
+		@keyframes gravitySpace {
+		    0% { background-position: 0% 50%; }
+		    50% { background-position: 100% 50%; }
+		    100% { background-position: 0% 50%; }
+		}
 
         /* The amazing master profile container from your image */
         .profile-card {
