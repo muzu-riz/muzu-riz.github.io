@@ -20,11 +20,10 @@
 
 		body {
 		    min-height: 100vh;
-		    /* 1. Changed angle to 180deg for seamless vertical looping. 
-		       2. Toned down the blues (#142866 and #0e1947) to keep them deep and dark. */
-		    background: linear-gradient(180deg, #1f0b3a, #1b1654, #42125c, #6c1b9c, #142866, #0e1947, #0f1035, #0b0c16, #160f2d, #1f0b3a);
-		    background-size: 100% 1000%; 
-		    animation: gravitySpace 30s linear infinite; /* Slowed down slightly for an ultra-smooth, calm drift */
+		    /* 1. Dark Synthwave Purple -> 2. Cyber Violet -> 3. Deep Galactic Indigo -> 4. Soft Space Void -> Loop Back */
+		    background: linear-gradient(180deg, #1f0b3a, #541675, #111b47, #0b0c16, #1f0b3a);
+		    background-size: 100% 500%; /* Shorter vertical track for perfectly even, non-compressed blending */
+		    animation: gravitySpace 24s linear infinite; /* Steady, calm cosmic drift */
 		    color: #e0d7ff;
 		    display: flex;
 		    flex-direction: column;
