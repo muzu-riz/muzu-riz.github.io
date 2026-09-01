@@ -139,6 +139,53 @@
             line-height: 1.6;
         }
 
+		/* Education Section Styles */
+		.education-item {
+		    display: flex;
+		    justify-content: space-between;
+		    align-items: flex-start;
+		    padding: 16px 0;
+		    border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+		}
+		
+		.education-item:last-child {
+		    border-bottom: none;
+		    padding-bottom: 0;
+		}
+		
+		.education-info h3 {
+		    font-size: 1.15rem;
+		    color: #ffffff;
+		    margin-bottom: 4px;
+		}
+		
+		.education-info p {
+		    font-size: 0.95rem;
+		    color: #baaae3;
+		}
+		
+		.education-duration {
+		    font-size: 0.9rem;
+		    color: #c4b5fd;
+		    font-weight: 500;
+		    background: rgba(138, 92, 246, 0.1);
+		    border: 1px solid rgba(167, 139, 250, 0.2);
+		    padding: 4px 10px;
+		    border-radius: 6px;
+		    white-space: nowrap;
+		}
+		
+		@media (max-width: 600px) {
+		    .education-item {
+		        flex-direction: column;
+		        gap: 8px;
+		    }
+		    .education-duration {
+		        align-self: flex-start;
+		    }
+		}
+
+
         /* Project Cards below main block */
         .project-card {
             background: rgba(255, 255, 255, 0.02);
@@ -236,33 +283,28 @@
         </section>
 
 		<!-- Educational Qualifications -->
-        <section id="education">
-            <h2>Education</h2>
-            <ul class="education-list">
-        	<li>
-            	<div class="education-header">
-                	<span class="university">University Name</span>
-                	<span class="duration">2022 — 2026</span>
-            	</div>
-            	<div class="degree">Bachelor of Science in Computer Science</div>
-            	<ul class="education-details">
-                	<li>Graduated with Honors (GPA: 3.8/4.0).</li>
-                	<li>Relevant coursework: Data Structures, Web Development, Software Engineering.</li>
-           		</ul>
-        	</li>
-        
-        	<li>
-            	<div class="education-header">
-                	<span class="university">Previous Institution Name</span>
-                	<span class="duration">2018 — 2022</span>
-            	</div>
-            	<div class="degree">High School Diploma</div>
-            	<ul class="education-details">
-                	<li>Led the computer science club and organized local hackathons.</li>
-            	</ul>
-        	</li>
-    	</ul>
-        </section>
+		<section id="education">
+		    <h2>Education</h2>
+		    
+		    <!-- University 1 -->
+		    <div class="education-item">
+		        <div class="education-info">
+		            <h3>Master of Science in Physics</h3>
+		            <p>Indian Institute of Technology Kharagpur</p>
+		        </div>
+		        <div class="education-duration">2026 — Present</div>
+		    </div>
+		
+		    <!-- University 2 -->
+		    <div class="education-item">
+		        <div class="education-info">
+		            <h3>Integrated Master of Science in Mathematics</h3>
+		            <p>Birla Institute of Technology and Science Pilani, Hyderabad</p>
+		        </div>
+		        <div class="education-duration">2020 — 2024</div>
+		    </div>
+		</section>
+
 
         <!-- Featured Work Card -->
         <section id="projects">
