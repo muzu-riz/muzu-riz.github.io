@@ -20,10 +20,13 @@
 
 		body {
 		    min-height: 100vh;
-		    /* Appended the starting color (#1f0b3a) to the very end to act as the circular loop anchor */
-		    background: linear-gradient(135deg, #1f0b3a, #1b1654, #42125c, #6c1b9c, #1a3fa8, #122269, #0f1035, #0b0c16, #160f2d, #1f0b3a);
-		    background-size: 100% 1000%; /* Stretched vertically to pull colors down in a continuous one-way stream */
-		    animation: gravitySpace 35s linear infinite; /* Adjusted speed to make the single-direction loop smooth */
+		    /* The 7-color sequence is repeated twice to allow a flawless, non-reversing circular loop */
+		    background: linear-gradient(135deg, 
+		        #25124e, #521c9c, #42125c, #6c1b9c, #1a3fa8, #122269, #0f1035,
+		        #25124e, #521c9c, #42125c, #6c1b9c, #1a3fa8, #122269, #0f1035
+		    );
+		    background-size: 200% 200%; /* Perfect scaling to protect your horizontal layout rules */
+		    animation: gravitySpace 28s linear infinite; /* One-way forward circular animation track */
 		    color: #e0d7ff;
 		    display: flex;
 		    flex-direction: column;
@@ -32,8 +35,8 @@
 		}
 		
 		@keyframes gravitySpace {
-		    0% { background-position: 50% 0%; }
-		    100% { background-position: 50% 100%; }
+		    0% { background-position: 0% 50%; }
+		    100% { background-position: 100% 50%; }
 		}
 
 
