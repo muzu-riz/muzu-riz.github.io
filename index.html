@@ -20,13 +20,11 @@
 
 		body {
 		    min-height: 100vh;
-		    /* The 7-color sequence is repeated twice to allow a flawless, non-reversing circular loop */
-		    background: linear-gradient(135deg, 
-		        #25124e, #521c9c, #42125c, #6c1b9c, #1a3fa8, #122269, #0f1035,
-		        #25124e, #521c9c, #42125c, #6c1b9c, #1a3fa8, #122269, #0f1035
-		    );
-		    background-size: 200% 200%; /* Perfect scaling to protect your horizontal layout rules */
-		    animation: gravitySpace 28s linear infinite; /* One-way forward circular animation track */
+		    /* 1. Changed angle to 180deg for seamless vertical looping. 
+		       2. Toned down the blues (#142866 and #0e1947) to keep them deep and dark. */
+		    background: linear-gradient(180deg, #1f0b3a, #1b1654, #42125c, #6c1b9c, #142866, #0e1947, #0f1035, #0b0c16, #160f2d, #1f0b3a);
+		    background-size: 100% 1000%; 
+		    animation: gravitySpace 45s linear infinite; /* Slowed down slightly for an ultra-smooth, calm drift */
 		    color: #e0d7ff;
 		    display: flex;
 		    flex-direction: column;
@@ -35,8 +33,8 @@
 		}
 		
 		@keyframes gravitySpace {
-		    0% { background-position: 0% 50%; }
-		    100% { background-position: 100% 50%; }
+		    0% { background-position: 50% 0%; }
+		    100% { background-position: 50% 100%; }
 		}
 
 
