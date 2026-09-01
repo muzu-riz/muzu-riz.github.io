@@ -269,12 +269,20 @@
 		    display: flex;
 		    align-items: center;
 		    justify-content: center;
-		    font-size: 1.2rem;
 		    opacity: 0;
 		    visibility: hidden;
 		    transition: all 0.3s ease;
 		    box-shadow: 0 0 15px rgba(110, 30, 220, 0.3);
 		    z-index: 1000;
+		}
+		
+		/* Perfect centering tweak for the wide arrow character */
+		#backToTop span {
+		    font-size: 1.5rem;
+		    font-weight: bold;
+		    line-height: 1;
+		    transform: translateY(-2px); /* Counters font line-height offsets */
+		    display: inline-block;
 		}
 		
 		#backToTop.show {
@@ -388,7 +396,7 @@
         </section>
     </div>
 <!--Back top button-->
-<button id="backToTop" aria-label="Back to top">▲</button>
+<button id="backToTop" aria-label="Back to top">︿</button>
 <script>
     const backToTopBtn = document.getElementById("backToTop");
 
