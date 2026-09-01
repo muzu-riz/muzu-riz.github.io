@@ -19,21 +19,21 @@
         }
 
 		body {
-		    min-height: 100vh;
-		    /* 1. Dark Synthwave Purple -> 2. Cyber Violet -> 3. Deep Galactic Indigo -> 4. Soft Space Void -> Loop Back */
-		    background: linear-gradient(180deg, #1f0b3a, #541675, #111b47, #0b0c16, #1f0b3a);
-		    background-size: 100% 500%; /* Shorter vertical track for perfectly even, non-compressed blending */
-		    animation: gravitySpace 24s linear infinite; /* Steady, calm cosmic drift */
-		    color: #e0d7ff;
-		    display: flex;
-		    flex-direction: column;
-		    align-items: center;
-		    padding: 60px 20px;
+    		min-height: 100vh;
+    		background: linear-gradient(135deg, #1f0b3a, #1b1654, #541675, #111b47, #0b0c16, #0b0c16, #0b0c16);
+    		background-size: 400% 300%;
+    		animation: gravitySpace 22s ease-in-out infinite; /* Smooth slowdown at the void peak */
+    		color: #e0d7ff;
+    		display: flex;
+    		flex-direction: column;
+    		align-items: center;
+    		padding: 60px 20px;
 		}
-		
+
 		@keyframes gravitySpace {
-		    0% { background-position: 50% 0%; }
-		    100% { background-position: 50% 100%; }
+    		0% { background-position: 50% 0%; }
+    		50% { background-position: 50% 100%; }
+    		100% { background-position: 50% 0%; }
 		}
 
 
