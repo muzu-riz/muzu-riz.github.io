@@ -20,10 +20,10 @@
 
 		body {
 		    min-height: 100vh;
-		    /* 1. Purple -> 2. Dark Blue -> 3. Plum -> 4. Cyber Violet -> 5. Soft Cobalt -> 6. Royal Navy -> 7. Cosmic Twilight -> 8. Soft Void -> 9. Midnight Indigo */
-		    background: linear-gradient(135deg, #1f0b3a, #1b1654, #42125c, #6c1b9c, #1a3fa8, #122269, #0f1035, #0b0c16, #160f2d);
-		    background-size: 600% 600%; /* Giant size completely deletes visible transition boundaries */
-		    animation: gravitySpace 26s linear infinite; /* Slightly slower to let the massive gradient breathe */
+		    /* Appended the starting color (#1f0b3a) to the very end to act as the circular loop anchor */
+		    background: linear-gradient(135deg, #1f0b3a, #1b1654, #42125c, #6c1b9c, #1a3fa8, #122269, #0f1035, #0b0c16, #160f2d, #1f0b3a);
+		    background-size: 100% 1000%; /* Stretched vertically to pull colors down in a continuous one-way stream */
+		    animation: gravitySpace 35s linear infinite; /* Adjusted speed to make the single-direction loop smooth */
 		    color: #e0d7ff;
 		    display: flex;
 		    flex-direction: column;
@@ -32,10 +32,10 @@
 		}
 		
 		@keyframes gravitySpace {
-		    0% { background-position: 0% 50%; }
-		    50% { background-position: 100% 50%; }
-		    100% { background-position: 0% 50%; }
+		    0% { background-position: 50% 0%; }
+		    100% { background-position: 50% 100%; }
 		}
+
 
         /* The amazing master profile container from your image */
         .profile-card {
