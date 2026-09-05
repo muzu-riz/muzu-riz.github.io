@@ -262,12 +262,19 @@
 		/* Miscellaneous Games Showcase Container */
 		.games-gallery {
 		    display: grid;
-		    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Slightly reduced min-width */
-		    gap: 15px;
+		    grid-template-columns: repeat(5, 1fr);
+		    gap: 20px;
 		    margin-top: 20px;
 		    max-width: 1050px; /* Locks the entire grid size inside your homepage width profile */
 		    margin-left: auto;
 		    margin-right: auto;
+		}
+		
+		/* Responsive adjustment for small mobile screens so text stays readable */
+		@media (max-width: 768px) {
+		    .games-gallery {
+		        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+		    }
 		}
 		
 		/* Individual Game Cards mimicking your image */
